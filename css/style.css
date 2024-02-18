@@ -1,0 +1,119 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  list-style: none;
+}
+/* Root Variable */
+:root {
+  --color-primary: #219f95;
+  --color-secondary-light: #afcedd;
+  --color-secondary-dark: #234894;
+  --color-navbar: #fff;
+  --color-heading: #000;
+  --color-body: #696969;
+  --color-white: #fff;
+  --border-radius: 8px;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2.2rem;
+  margin: 3rem;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.4rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* container Style */
+.container {
+  display: grid;
+  grid-template-columns: 350px;
+  height: 200px;
+}
+.items {
+  padding: 1rem;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 50px 1fr 150px;
+  justify-content: center;
+  align-items: center;
+}
+.blueText {
+  color: var(--color-secondary-dark);
+  font-weight: 700;
+}
+.badge {
+  border-radius: var(--border-radius);
+  background: var(--color-secondary-light);
+  padding: 1rem 1.7rem;
+  margin: 0 0 1rem 1rem;
+}
+.request {
+  grid-column: 1/4;
+}
+.grayText {
+  color: var(--color-body);
+  font-size: 1.2rem;
+}
+.date {
+  justify-self: end;
+}
+img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+/* button Style */
+.btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1.2 rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  border-radius: var(--border-radius);
+  padding: 1.5rem 1rem;
+  text-align: center;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 350px);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(3, 350px);
+  }
+}
